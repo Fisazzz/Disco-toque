@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Диско-электростанция</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Страница 1: обложка -->
+    <section class="hero" id="home">
+      <h1>ДИСКО-<br />ЭЛЕКТРОСТАНЦИЯ</h1>
+      <a href="#menu" class="enter">ВОЙТИ</a>
+    </section>
+
+    <!-- Страница 2: щиток с двумя кнопками -->
+    <section class="menu" id="menu">
+      <div class="panel">
+        <img
+          src="images/panel.jpg"
+          alt="Электрощиток с зелёной и красной кнопками"
+        />
+        <nav class="buttons">
+          <a href="#concept" class="btn btn-concept">КОНЦЕПТ</a>
+          <a href="#visit" class="btn btn-visit">ПОПАСТЬ</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Страница 3 -->
+    <section class="section concept" id="concept">
+      <i class="sq" style="--c: #00ffc8; top: 2%; left: 4%"></i>
+      <i class="sq" style="--c: #ff3bbd; top: 7%; right: 6%"></i>
+      <i class="sq" style="--c: #435dff; top: 40%; left: 2%"></i>
+      <svg class="warn" viewBox="0 0 64 56" aria-hidden="true">
+        <use href="#warn" />
+      </svg>
+      <h2>КОНЦЕПТ</h2>
+
+      <div class="cards">
+        <article class="card" style="--c: #00ffc8">
+          В трансформаторном цехе танцующие производят электричество города и
+          самого цеха через пьезопол.
+        </article>
+        <article class="card" style="--c: #00d800">
+          Чем активнее движение, тем ярче вспышки и насыщеннее цвета,
+          синхронизированные с музыкой.
+        </article>
+        <article class="card" style="--c: #ff3bbd">
+          Если толпа замирает, гаснут огни и включаются медленные песни. Они
+          вынуждают двигаться снова.
+        </article>
+        <article class="card" style="--c: #ff8c00">
+          Накопленная за ночь энергия утром освещает городские фонари.
+        </article>
+      </div>
+
+      <div class="meter">
+        <p>Индикатор накопленной за ночь энергии</p>
+        <div class="cells" id="meter"></div>
+      </div>
+
+      <div class="actions">
+        <a class="go" href="#visit">ПОПАСТЬ В ДИСКО-ЭЛЕКТРОСТАНЦИЮ →</a>
+        <a class="back" href="#menu">НАЗАД</a>
+      </div>
+    </section>
+
+    <!-- Страница 4 -->
+    <!-- Страница 4 -->
+    <section class="section concept visit" id="visit">
+      <i class="sq" style="--c: #935cfa; top: 18%; right: 4%"></i>
+      <i class="sq" style="--c: #ff0055; top: 52%; left: 2%"></i>
+
+      <svg class="warn" viewBox="0 0 64 56" aria-hidden="true">
+        <use href="#warn" />
+      </svg>
+
+      <p class="lead">Вечеринки каждую пятницу и субботу 3027 года</p>
+
+      <div class="days">
+        <div class="day" style="--c: #00ffc8">
+          <b>ПТ</b><span>22:00 — 06:30</span><em>Разогрев сети</em>
+        </div>
+        <div class="day" style="--c: #ff3bbd">
+          <b>СБ</b><span>22:00 — 07:00</span><em>Полная нагрузка</em>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="slot" style="--c: #00d800">
+          <b>22:00</b>
+          <p>
+            Запуск станции. Двери открыты, браслеты выданы, индикатор на нуле.
+          </p>
+        </div>
+        <div class="slot" style="--c: #f7f700">
+          <b>00:00</b>
+          <p>Пик нагрузки. Главный сет, пьезопол работает на максимуме.</p>
+        </div>
+        <div class="slot" style="--c: #935cfa">
+          <b>03:00</b>
+          <p>Проверка сети. Если замрёте, мы включим медленные песни.</p>
+        </div>
+        <div class="slot" style="--c: #ff8c00">
+          <b>06:30</b>
+          <p>Рассвет. Накопленная энергия уходит в городские фонари.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card" style="--c: #ff3bbd">
+          <b>Дресс-код.</b> Удобная одежда, лучше яркая, улыбка и много энергии.
+          Обувь выбирайте такую, в которой можно прыгать до утра: пьезопол любит
+          тех, кто двигается.
+        </article>
+        <article class="card" style="--c: #435dff">
+          <b>Браслеты.</b> На входе вам выдадут браслет-накопитель. Он светится
+          тем ярче, чем больше энергии вы синтезировали. Утром браслет покажет
+          ваш личный вклад в освещение города. Лучшие генераторы ночи попадают
+          на доску почёта у индикатора.
+        </article>
+        <article class="card" style="--c: #00ffc8">
+          <b>Правила цеха.</b>
+          <ul>
+            <li>
+              Не стоять на месте: погаснет свет, и все узнают, кто виноват.
+            </li>
+            <li>
+              Не умеете танцевать? Станции всё равно: она считает движение, а не
+              мастерство.
+            </li>
+            <li>
+              Высокое напряжение: на танцполе возможна любовь с первого взгляда.
+            </li>
+            <li>Огни погасли? Немедленно начинайте двигаться.</li>
+            <li>
+              Перегрузка сети приветствуется, перегрузка организма — нет. Вам
+              будут предложены еда и напитки.
+            </li>
+          </ul>
+        </article>
+        <article class="card" style="--c: #ff8c00">
+          <b>Место:</b> трансформаторный цех, вход со двора.
+        </article>
+      </div>
+
+      <div class="plate">
+        <i class="rivet r1"></i><i class="rivet r2"></i> <i class="rivet r3"></i
+        ><i class="rivet r4"></i>
+        <div class="label">
+          <img src="images/logo.png" alt="ДИСКОТОК" />
+        </div>
+        <p>ТРАНСФОРМАТОРНЫЙ ЦЕХ · 3027</p>
+      </div>
+
+      <div class="actions">
+        <a class="back" href="#home">НАЗАД В РЕАЛЬНЫЙ МИР</a>
+      </div>
+    </section>
+
+    <script>
+      const palette = [
+        "#00ffc8",
+        "#00d800",
+        "#f7f700",
+        "#ff3bbd",
+        "#935cfa",
+        "#436dff",
+        "#ff8c00",
+        "#ff0055",
+      ];
+      const meter = document.getElementById("meter");
+      const cells = [...Array(12)].map((_, i) => {
+        const c = document.createElement("i");
+        c.style.setProperty("--c", palette[i % palette.length]);
+        meter.appendChild(c);
+        return c;
+      });
+
+      const timers = [];
+      new IntersectionObserver(
+        ([e]) => {
+          timers.forEach(clearTimeout);
+          timers.length = 0;
+          if (e.isIntersecting) {
+            cells
+              .slice(0, 8)
+              .forEach((c, i) =>
+                timers.push(setTimeout(() => c.classList.add("on"), i * 150)),
+              );
+          } else {
+            cells.forEach((c) => c.classList.remove("on"));
+          }
+        },
+        { threshold: 0.6 },
+      ).observe(meter);
+    </script>
+  </body>
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <symbol id="warn" viewBox="0 0 64 56">
+      <path
+        d="M32 4 L60 52 H4 Z"
+        fill="#ffc400"
+        stroke="#000"
+        stroke-width="5"
+        stroke-linejoin="round"
+      />
+      <path d="M37 17 L26 33 H32 L29 44 L41 27 H34 Z" fill="#000" />
+    </symbol>
+  </svg>
+</html>
