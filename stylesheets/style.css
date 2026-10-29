@@ -52,7 +52,7 @@ body {
 
 /* ---------- Страница 1: обложка ---------- */
 .hero {
-  background: url("../images/cover.jpg") center / cover no-repeat;
+  background: url("../images/cover.JPG") center / cover no-repeat;
 }
 
 h1 {
