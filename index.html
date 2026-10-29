@@ -4,127 +4,236 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Диско-электростанция</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Стили: порядок важен (сначала сброс, потом шрифты, потом остальное) -->
+    <link rel="stylesheet" href="stylesheets/reset.css" />
+    <link rel="stylesheet" href="stylesheets/fonts.css" />
+    <link rel="stylesheet" href="stylesheets/layout.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <!-- Фавиконка -->
+    <link rel="icon" href="images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
   <body>
+    <!-- Спрятанный набор значков: значок молнии берётся отсюда через <use> -->
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="warn" viewBox="0 0 64 56">
+        <path class="warn-shape" d="M32 4 L60 52 H4 Z" />
+        <path
+          class="warn-bolt"
+          d="M28.8 25.5 L38.4 25.5 L32.8 34.7 L40 34.7 L25.6 47.5 L30.4 38.3 L24 38.3 Z"
+        />
+      </symbol>
+    </svg>
+
     <!-- Страница 1: обложка -->
-    <section class="hero" id="home">
+    <section class="hero" id="start">
       <h1>ДИСКО-<br />ЭЛЕКТРОСТАНЦИЯ</h1>
-      <a href="#menu" class="enter">ВОЙТИ</a>
+      <p class="hero-lead">Вы входите в волшебный мир электричества и танцев</p>
+      <a href="#panel" class="enter">ВПЕРЁД</a>
     </section>
 
-    <!-- Страница 2: щиток с двумя кнопками -->
-    <section class="menu" id="menu">
-      <div class="panel">
-        <img
-          src="images/panel.jpg"
-          alt="Электрощиток с зелёной и красной кнопками"
-        />
-        <nav class="buttons">
-          <a href="#concept" class="btn btn-concept">КОНЦЕПТ</a>
-          <a href="#visit" class="btn btn-visit">ПОПАСТЬ</a>
+    <!-- Страница 2: пульт управления в графике -->
+    <!-- ИИ: Claude написал эту страницу по моему описанию. Запись №5 в README -->
+    <section class="menu" id="panel">
+      <div class="frame">
+        <!-- полосы как в графическом образе: сверху и снизу -->
+        <div class="bars bars-top" aria-hidden="true">
+          <div class="bar c-mint"></div>
+          <div class="bar c-green"></div>
+          <div class="bar c-yellow"></div>
+          <div class="bar c-pink"></div>
+          <div class="bar c-purple"></div>
+          <div class="bar c-blue"></div>
+          <div class="bar c-orange"></div>
+          <div class="bar c-red"></div>
+        </div>
+        <div class="bars bars-bottom" aria-hidden="true">
+          <div class="bar c-red"></div>
+          <div class="bar c-orange"></div>
+          <div class="bar c-blue"></div>
+          <div class="bar c-purple"></div>
+          <div class="bar c-pink"></div>
+          <div class="bar c-yellow"></div>
+          <div class="bar c-green"></div>
+          <div class="bar c-mint"></div>
+        </div>
+
+        <svg class="warn warn-big" viewBox="0 0 64 56" aria-hidden="true">
+          <use href="#warn" />
+        </svg>
+
+        <!-- слово «ПУСК» и по бокам два одинаковых треугольника -->
+        <div class="title-row">
+          <svg class="tri" viewBox="0 0 64 56" aria-hidden="true">
+            <use href="#warn" />
+          </svg>
+          <h2 class="tiles" aria-label="Пуск">
+            <span class="tile c-mint" aria-hidden="true">П</span>
+            <span class="tile c-pink" aria-hidden="true">У</span>
+            <span class="tile c-yellow" aria-hidden="true">С</span>
+            <span class="tile c-orange" aria-hidden="true">К</span>
+          </h2>
+          <svg class="tri pos-t2" viewBox="0 0 64 56" aria-hidden="true">
+            <use href="#warn" />
+          </svg>
+        </div>
+
+        <p class="hint">Выберите режим, чтобы подать напряжение</p>
+
+        <nav class="switches">
+          <a class="switch c-green" href="#concept">
+            <span class="mark" aria-hidden="true"></span>КОНЦЕПТ
+          </a>
+          <a class="switch c-red" href="#party">
+            <span class="mark" aria-hidden="true"></span>ПОПАСТЬ
+          </a>
         </nav>
+
+        <div class="leds" aria-hidden="true">
+          <div class="led c-green"></div>
+          <div class="led c-yellow"></div>
+          <div class="led c-red"></div>
+        </div>
+
+        <p class="tag">ТРАНСФОРМАТОРНЫЙ ЦЕХ · ЩИТ №1 · 3030</p>
+        <a class="back" href="#start">НАЗАД В РЕАЛЬНЫЙ МИР</a>
       </div>
     </section>
 
-    <!-- Страница 3 -->
+    <!-- Страница 3: концепт -->
+    <!-- ИИ: Claude написал эту страницу, тексты разбиты на карточки. Запись №2 в README -->
     <section class="section concept" id="concept">
-      <i class="sq" style="--c: #00ffc8; top: 2%; left: 4%"></i>
-      <i class="sq" style="--c: #ff3bbd; top: 7%; right: 6%"></i>
-      <i class="sq" style="--c: #435dff; top: 40%; left: 2%"></i>
+      <div class="sq c-mint pos-1" aria-hidden="true"></div>
+      <div class="sq c-pink pos-2" aria-hidden="true"></div>
+      <div class="sq c-blue pos-3" aria-hidden="true"></div>
+      <svg class="tri pos-t1" viewBox="0 0 64 56" aria-hidden="true">
+        <use href="#warn" />
+      </svg>
+      <svg class="tri pos-t2" viewBox="0 0 64 56" aria-hidden="true">
+        <use href="#warn" />
+      </svg>
+
       <svg class="warn" viewBox="0 0 64 56" aria-hidden="true">
         <use href="#warn" />
       </svg>
       <h2>КОНЦЕПТ</h2>
 
       <div class="cards">
-        <article class="card" style="--c: #00ffc8">
+        <article class="card c-mint">
           В трансформаторном цехе танцующие производят электричество города и
           самого цеха через пьезопол.
         </article>
-        <article class="card" style="--c: #00d800">
+        <article class="card c-green">
           Чем активнее движение, тем ярче вспышки и насыщеннее цвета,
           синхронизированные с музыкой.
         </article>
-        <article class="card" style="--c: #ff3bbd">
+        <article class="card c-pink">
           Если толпа замирает, гаснут огни и включаются медленные песни. Они
           вынуждают двигаться снова.
         </article>
-        <article class="card" style="--c: #ff8c00">
+        <article class="card c-orange">
           Накопленная за ночь энергия утром освещает городские фонари.
         </article>
       </div>
 
+      <!-- Индикатор энергии: 12 ячеек, заполняются стилями (без JavaScript) -->
       <div class="meter">
         <p>Индикатор накопленной за ночь энергии</p>
-        <div class="cells" id="meter"></div>
+        <div class="cells" aria-hidden="true">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
       </div>
 
       <div class="actions">
-        <a class="go" href="#visit">ПОПАСТЬ В ДИСКО-ЭЛЕКТРОСТАНЦИЮ →</a>
-        <a class="back" href="#menu">НАЗАД</a>
+        <a class="go" href="#party">ПОПАСТЬ В ДИСКО-ЭЛЕКТРОСТАНЦИЮ →</a>
+        <a class="back" href="#panel">НАЗАД</a>
       </div>
     </section>
 
-    <!-- Страница 4 -->
-    <!-- Страница 4 -->
-    <section class="section concept visit" id="visit">
-      <i class="sq" style="--c: #935cfa; top: 18%; right: 4%"></i>
-      <i class="sq" style="--c: #ff0055; top: 52%; left: 2%"></i>
+    <!-- Страница 4: как попасть -->
+    <!-- ИИ: Claude написал структуру и придумал часть текстов. Запись №3 в README -->
+    <section class="section concept visit" id="party">
+      <div class="sq c-purple pos-1" aria-hidden="true"></div>
+      <div class="sq c-red pos-2" aria-hidden="true"></div>
+      <div class="sq c-mint pos-3" aria-hidden="true"></div>
+      <div class="sq c-blue pos-4" aria-hidden="true"></div>
+      <svg class="tri pos-t1" viewBox="0 0 64 56" aria-hidden="true">
+        <use href="#warn" />
+      </svg>
+      <svg class="tri pos-t2" viewBox="0 0 64 56" aria-hidden="true">
+        <use href="#warn" />
+      </svg>
 
       <svg class="warn" viewBox="0 0 64 56" aria-hidden="true">
         <use href="#warn" />
       </svg>
 
-      <p class="lead">Вечеринки каждую пятницу и субботу 3027 года</p>
+      <!-- заголовок виден только программам чтения с экрана -->
+      <h2 class="visually-hidden">Как попасть в диско-электростанцию</h2>
+
+      <p class="lead">Вечеринки каждую пятницу и субботу 3030 года</p>
 
       <div class="days">
-        <div class="day" style="--c: #00ffc8">
+        <div class="day c-mint">
           <b>ПТ</b><span>22:00 — 06:30</span><em>Разогрев сети</em>
         </div>
-        <div class="day" style="--c: #ff3bbd">
+        <div class="day c-pink">
           <b>СБ</b><span>22:00 — 07:00</span><em>Полная нагрузка</em>
         </div>
       </div>
 
       <div class="timeline">
-        <div class="slot" style="--c: #00d800">
+        <div class="slot c-green">
           <b>22:00</b>
           <p>
             Запуск станции. Двери открыты, браслеты выданы, индикатор на нуле.
           </p>
         </div>
-        <div class="slot" style="--c: #f7f700">
+        <div class="slot c-yellow">
           <b>00:00</b>
           <p>Пик нагрузки. Главный сет, пьезопол работает на максимуме.</p>
         </div>
-        <div class="slot" style="--c: #935cfa">
+        <div class="slot c-purple">
           <b>03:00</b>
           <p>Проверка сети. Если замрёте, мы включим медленные песни.</p>
         </div>
-        <div class="slot" style="--c: #ff8c00">
+        <div class="slot c-orange">
           <b>06:30</b>
           <p>Рассвет. Накопленная энергия уходит в городские фонари.</p>
         </div>
       </div>
 
       <div class="cards">
-        <article class="card" style="--c: #ff3bbd">
+        <article class="card c-pink">
           <b>Дресс-код.</b> Удобная одежда, лучше яркая, улыбка и много энергии.
           Обувь выбирайте такую, в которой можно прыгать до утра: пьезопол любит
           тех, кто двигается.
         </article>
-        <article class="card" style="--c: #435dff">
+        <article class="card c-blue">
           <b>Браслеты.</b> На входе вам выдадут браслет-накопитель. Он светится
           тем ярче, чем больше энергии вы синтезировали. Утром браслет покажет
           ваш личный вклад в освещение города. Лучшие генераторы ночи попадают
           на доску почёта у индикатора.
         </article>
-        <article class="card" style="--c: #00ffc8">
+        <article class="card c-mint">
           <b>Правила цеха.</b>
           <ul>
             <li>
-              Не стоять на месте: погаснет свет, и все узнают, кто виноват.
+              Не стоять на месте: погаснет свет,<br />и все узнают, кто виноват.
             </li>
             <li>
               Не умеете танцевать? Станции всё равно: она считает движение, а не
@@ -140,73 +249,54 @@
             </li>
           </ul>
         </article>
-        <article class="card" style="--c: #ff8c00">
-          <b>Место:</b> трансформаторный цех, вход со двора.
+        <article class="card c-orange">
+          <b>Место:</b> трансформаторный цех,<br />вход со двора.
         </article>
       </div>
 
+      <!-- ИИ: Claude написал шильдик с заклёпками. Запись №4 в README -->
       <div class="plate">
-        <i class="rivet r1"></i><i class="rivet r2"></i> <i class="rivet r3"></i
-        ><i class="rivet r4"></i>
+        <div class="rivet r1" aria-hidden="true"></div>
+        <div class="rivet r2" aria-hidden="true"></div>
+        <div class="rivet r3" aria-hidden="true"></div>
+        <div class="rivet r4" aria-hidden="true"></div>
         <div class="label">
           <img src="images/logo.png" alt="ДИСКОТОК" />
         </div>
-        <p>ТРАНСФОРМАТОРНЫЙ ЦЕХ · 3027</p>
+        <p>ТРАНСФОРМАТОРНЫЙ ЦЕХ · 3030</p>
       </div>
 
       <div class="actions">
-        <a class="back" href="#home">НАЗАД В РЕАЛЬНЫЙ МИР</a>
+        <a class="back" href="#start">НАЗАД В РЕАЛЬНЫЙ МИР</a>
       </div>
     </section>
 
-    <script>
-      const palette = [
-        "#00ffc8",
-        "#00d800",
-        "#f7f700",
-        "#ff3bbd",
-        "#935cfa",
-        "#436dff",
-        "#ff8c00",
-        "#ff0055",
-      ];
-      const meter = document.getElementById("meter");
-      const cells = [...Array(12)].map((_, i) => {
-        const c = document.createElement("i");
-        c.style.setProperty("--c", palette[i % palette.length]);
-        meter.appendChild(c);
-        return c;
-      });
-
-      const timers = [];
-      new IntersectionObserver(
-        ([e]) => {
-          timers.forEach(clearTimeout);
-          timers.length = 0;
-          if (e.isIntersecting) {
-            cells
-              .slice(0, 8)
-              .forEach((c, i) =>
-                timers.push(setTimeout(() => c.classList.add("on"), i * 150)),
-              );
-          } else {
-            cells.forEach((c) => c.classList.remove("on"));
-          }
-        },
-        { threshold: 0.6 },
-      ).observe(meter);
-    </script>
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>СВЯЗАТЬСЯ С ОРГАНИЗАТОРОМ</h3>
+          <p>
+            ✉️
+            <a href="mailto:anfalezakharova@edu.hse.ru"
+              >anfalezakharova@edu.hse.ru</a
+            >
+          </p>
+          <p>📞 <a href="tel:+67676767667">+6(767)676-76-67</a></p>
+        </div>
+        <div class="footer-col">
+          <h3>ГЕНЕРАЛЬНЫЙ СПОНСОР</h3>
+          <p>Артём Вешытал</p>
+          <p class="small-text">
+            Обеспечивает бесперебойную подачу баса в сеть.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>ДИСКО-ЭЛЕКТРОСТАНЦИЯ</h3>
+          <p>Работаем без выходных,<br />пока в городе горит свет.</p>
+          <p class="small-text">&copy; 3030. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
   </body>
-  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-    <symbol id="warn" viewBox="0 0 64 56">
-      <path
-        d="M32 4 L60 52 H4 Z"
-        fill="#ffc400"
-        stroke="#000"
-        stroke-width="5"
-        stroke-linejoin="round"
-      />
-      <path d="M37 17 L26 33 H32 L29 44 L41 27 H34 Z" fill="#000" />
-    </symbol>
-  </svg>
 </html>

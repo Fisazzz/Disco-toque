@@ -1,0 +1,37 @@
+/* RESET: убираем различия между браузерами */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* ширина включает padding и рамку */
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
