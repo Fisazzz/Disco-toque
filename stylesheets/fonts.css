@@ -1,0 +1,13 @@
+/* Шрифты: отдельного файла шрифта нет, используем системные без засечек */
+:root {
+  --font-main: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+}
+
+h1,
+h2 {
+  font-weight: 900;
+}
