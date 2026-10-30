@@ -36,16 +36,6 @@ images/
 
 Порядок подключения стилей важен: reset → fonts → layout → style.
 
-## Как запустить локально
-
-Откройте `index.html` в браузере двойным щелчком. Или запустите локальный сервер:
-
-```bash
-python3 -m http.server 8000
-```
-
-и откройте http://localhost:8000.
-
 ## Публикация на GitHub Pages
 
 Settings → Pages → Source: *Deploy from a branch* → ветка `main`, папка `/ (root)`. Через 1–2 минуты сайт появится по адресу выше.
